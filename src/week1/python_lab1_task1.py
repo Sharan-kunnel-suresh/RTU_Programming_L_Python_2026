@@ -36,7 +36,9 @@ def circle_area(radius: float) -> float:
 
 
 if __name__ == "__main__":
-    r=float(input("enter the radius to calculate the radius"))
-    print(f"Area of the circle ; {    circle_area(r):.4f}")
-    
+    try:
+        r=float(input("enter the radius to calculate the radius"))
+        print(f"Area of the circle ; {    circle_area(r):.4f}")
+    except ValueError as e:
+        print(f"Error: {e}")
 
