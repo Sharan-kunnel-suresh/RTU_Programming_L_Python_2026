@@ -26,16 +26,17 @@ Examples (these are also used to check your work):
 >>> circle_area(0)
 0.0
 """
-from math import pi
+import math
 
 def circle_area(radius: float) -> float:
     if radius<=0:
-        print("Error cannot calculate the area of a number <=0")
-        return False
-    area=(math.pi*(radius**2))
-    return print("Area of the circle",area)
+        raise ValueError("radius cant be negative ")
+    return math.pi*radius**2
+
 
 
 if __name__ == "__main__":
-    radius=float(input("enter the radius to calculate the radius"))
-    pass
+    r=float(input("enter the radius to calculate the radius"))
+    print(f"Area of the circle ; {    circle_area(r):.4f}")
+    
+
