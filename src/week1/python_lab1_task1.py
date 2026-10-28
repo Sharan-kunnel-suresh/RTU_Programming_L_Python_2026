@@ -26,18 +26,16 @@ Examples (these are also used to check your work):
 >>> circle_area(0)
 0.0
 """
-
-# TODO: import math
-
+from math import pi
 
 def circle_area(radius: float) -> float:
-    """Return the area of a circle given its radius (unrounded)."""
-    # TODO: implement formula using math.pi
-    raise NotImplementedError("circle_area() is not implemented yet")
+    if radius<=0:
+        print("Error cannot calculate the area of a number <=0")
+        return False
+    area=(math.pi*(radius**2))
+    return print("Area of the circle",area)
 
 
 if __name__ == "__main__":
-    # Keep all input() calls inside this block, otherwise the autograder
-    # cannot import your file.
-    # TODO: ask for user input, call circle_area(), and print formatted result
+    radius=float(input("enter the radius to calculate the radius"))
     pass
