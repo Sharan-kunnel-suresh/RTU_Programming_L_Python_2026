@@ -31,7 +31,7 @@ def greet_user(name: str) -> str:
     name = name.strip()
     if not name:
         name = "stranger"  # giving name as stranger if there is no name so far so they can pass empty
-    return f"Hello,{name.capitalize()}!Welcome to Python !"
+    return f"Hello, {name.capitalize()}! Welcome to Python!"
 
 
 if __name__ == "__main__":
@@ -39,4 +39,3 @@ if __name__ == "__main__":
     # cannot import your file.
     u_name = input("Enter your name:")
     print(greet_user(u_name))
-    
